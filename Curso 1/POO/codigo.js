@@ -20,7 +20,7 @@ class animal{
 class Perro extends animal{
     constructor(especie,edad,color,raza){
         super(especie,edad,color);
-        this.raza = raza;
+        this.raza = null;
     }
     // Metodo static, tiene la peculiaridad
     // de que puede ser invocado o usado
@@ -28,24 +28,42 @@ class Perro extends animal{
     // un objeto, o de ser creado uno, puede
     // llamar a este método sin necesidad de 
     // darle parámetros al objeto.
-    static ladrar() {
-        alert("¡WAW!")
+    static ladrar(){
+        alert("WAW")
+    }
+
+    // Un setter permite recibir un parámetro para modificar el valor de una variable del constructor
+    // aún si este tiene el tipo null.
+    // pero para brindarle un valor que sustituya null hay que hacerlo de la siguiente manera
+    // perro1.modificarRaza = "nombre"
+    
+    set setRaza(newName) { // Esto es un método
+        this.raza = newName
+    }
+
+    // De esta manera podemos obtener un valor, sin tener que llamar directamente al valor
+    // sino llamar a una función.
+    get getRaza(){
+        return this.raza;
     }
 }
 
-let perro = new animal("perro",5,"cafe");
-let perro1 = new Perro("perro",5,"cafe", "doberman");
-let gato = new animal("gato",3,"blanco");
-let pajaro = new animal("pajaro",2,"verde");
+const perro = new animal("perro",5,"cafe");
+const perro1 = new Perro("perro",5,"cafe", "doberman");
+const gato = new animal("gato",3,"blanco");
+const pajaro = new animal("pajaro",2,"verde");
 
 // console.log(perro)
 // console.log(gato)
 // console.log(pajaro)
 
 
-perro.verInfo();
-perro1.verInfo();
-perro1.ladrar();
-Perro.ladrar();
-gato.verInfo();
-pajaro.verInfo();
+// perro.verInfo();
+// perro1.verInfo();
+// perro1.ladrar();
+// Perro.ladrar();
+// gato.verInfo();
+// pajaro.verInfo();
+
+perro1.setRaza = "Puddul";
+document.write(perro1.getRaza)
