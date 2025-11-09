@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="style.css">
+    <title>DOM JavaScript</title>
+</head>
+<body>
+    <h1 class="titulo">Nodo</h1>
+    <p id="parrafo">Un nodo es cada uno de los elementos que componen un documento HTML o XML. 
+    El DOM (Document Object Model) representa la estructura del documento como un árbol de nodos, donde cada nodo puede ser un elemento, un atributo, un texto, etc.</p>
+    <h2>Tipos de nodos</h2>
+    <ul class="nodos">
+        <li><strong>Nodo de documento:</strong> Representa el documento completo.</li>
+        <li><strong>Nodo de elemento:</strong> Representa un elemento HTML o XML (por ejemplo, &lt;div&gt;, &lt;p&gt;, &lt;a&gt;).</li>
+        <li><strong>Nodo de texto:</strong> Contiene el texto dentro de un elemento o atributo.</li>
+        <li><strong>Nodo de atributo:</strong> Representa un atributo de un elemento (por ejemplo, id, class).</li>
+        <li><strong>Nodo de comentario:</strong> Representa un comentario en el código HTML o XML.</li>
+    </ul>
+    <h2>Manipulación del DOM con JavaScript</h2>
+    <p>JavaScript proporciona varias formas de acceder y manipular los nodos del DOM. Algunas de las funciones más comunes incluyen:</p>
+    <ul class="manejo">
+        <li class="manejo__item"><code>document.getElementById()</code>: Selecciona un elemento por su ID.</li>
+        <li class="manejo__item"><code>document.getElementsByTagName()</code>: Selecciona elementos por su etiqueta.</li>
+        <li class="manejo__item"><code>document.getElementsByClassName()</code>: Selecciona elementos por su clase.</li>
+        <li class="manejo__item"><code>document.querySelector()</code>: Devuelve el primer elemento que coincida con el grupo especificado de selectores</li>
+        <li class="manejo__item"><code>document.querySelectorAll()</code>: Devuelve todos los elemento que coincidan con el grupo especificado de selectores</li>
+        <li class="manejo__item"><code>element.innerHTML</code>: Permite cambiar el contenido HTML de un elemento.</li>
+        <li class="manejo__item"><code>element.style</code>: Permite cambiar los estilos CSS de un elemento.</li>
+        <li class="manejo__item"><code>element.appendChild()</code>: Añade un nuevo nodo hijo a un elemento.</li>
+        <li class="manejo__item"><code>element.removeChild()</code>: Elimina un nodo hijo de un elemento.</li>
+    </ul>
+
+    <input type="range" class="rangoInput" placeholder="holi">
+    <label for="rangoInput">Rango de edad</label>
+
+    <input type="text" class="inputTexto" placeholder="texto">
+    <label for="inputText">Texto</label><br><br>
+
+    <form id="formulario">
+        <input type="text" name="nombre" placeholder="Nombre" class="inputForm">
+        <input type="submit" value="Enviar">
+    </form>
+    <input type="submit" form="formulario">
+</body>
+<script src="codigo.js"></script>
+</html>
